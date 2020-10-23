@@ -1,11 +1,10 @@
 const http = require('http');
 
-const server = http.createServera();
+const server = http.createServer();
 
 server.on('request', function (request, response) {
-  const randomName = "random";
-
-  response.writem('Your random name: ' + randomName);
+  var name = "NomePessoa"
+  response.write('Your random name: ' + nome);
   response.end();
 });
 

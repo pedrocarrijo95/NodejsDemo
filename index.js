@@ -1,6 +1,6 @@
 const http = require('http');
 
-const server = http.createServer();
+const server = http.createServera();
 
 server.on('request', function (request, response) {
   const randomName = "random";

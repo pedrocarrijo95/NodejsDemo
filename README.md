@@ -1,4 +1,4 @@
-# Install Sonarqube steps
+# Install Sonarqube 
 
 
 ## Step 1 - Install Docker
@@ -13,7 +13,7 @@ $ docker image pull sonarqube:latest
 ```bash
 $ docker container run -d --name sonarqube -p 9000:9000 sonarqube:latest
 ```
-# Setup Sonarqube
+
 ## Step 4 - Open it in browser and login in with username: admin, password: admin
 ```bash
 Example: http://ip_address:9000

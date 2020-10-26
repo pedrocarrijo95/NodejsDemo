@@ -29,7 +29,7 @@ Example: http://ip_address:9000
 ![alt text](https://github.com/pedrocarrijo95/NodejsDemo/blob/master/imgs/generatetoken.PNG)
 ```bash 
 - Select options of your project, download sonar-scanner and add the **bin** directory to the **PATH** environment variable
-- The last step is run sonarqube with command that show to you inside the folder of project sample
+- The last step you just need to execute the following commands in your project's folder.
 ```
 ![alt text](https://github.com/pedrocarrijo95/NodejsDemo/blob/master/imgs/configs.PNG)
 

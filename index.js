@@ -10,7 +10,7 @@ var a=10,b=5;
 
 
 app.get('/', (req, res) => {
-    return res.status(200).json({ valorA:  a, valorB: c });
+    return res.status(200).json({ valorA:  a, valorB: b });
 });
 
 app.get('/adicao', (req, res) => {
@@ -22,7 +22,7 @@ app.get('/subtracao', (req, res) => {
 });
 
 app.get('/multi', (req, res) => {
-    return res.status(200).json({ resultado:  calculator.multiply(a,d) });
+    return res.status(200).json({ resultado:  calculator.multiply(a,b) });
 });
 
 

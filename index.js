@@ -1,17 +1,35 @@
 const http = require('http');
+const express =  require('express');
+const app =  express();
+const port =  process.env.PORT  ||  3000
 
-const server = http.createServer();
 
-server.on('request', function (request, response) {
-  var name = "NomePessoa";
-  setNome("Pedro");
-  response.write('Seu nome: ' + nome);
-  response.end();
+var calculator = require('./calculator');
+
+var a=10,b=5;
+
+
+app.get('/', (req, res) => {
+    return res.status(200).json({ valorA:  a, valorB: b });
 });
 
-server.listen(3000);
+app.get('/adicao', (req, res) => {
+    return res.status(200).json({ resultado:  calculator.add(a,b) });
+});
 
-function setNome(var nome){
-	name = nome;
-}
-console.log('Server is running.');
+app.get('/subtracao', (req, res) => {
+    return res.status(200).json({ resultado:  calculator.subtract(a,b) });
+});
+
+app.get('/multi', (req, res) => {
+    return res.status(200).json({ resultado:  calculator.multiply(a,b) });
+});
+
+app.get('/adicao', (req, res) => {
+    return res.status(200).json({ resultado:  calculator.add(a,b) });
+});
+
+let server = app.listen(port, () => {
+    console.log(`Application running on ${port}`);
+});
+
